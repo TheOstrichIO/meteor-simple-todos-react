@@ -35,7 +35,9 @@ Task = React.createClass({
           onClick={this.toggleChecked} />
 
         <span className="text">
-          <strong>{this.props.task.username}</strong>: {this.props.task.text}
+          <strong>
+            {this.props.task.username ? this.props.task.username : '<someone>'}
+          </strong>: {this.props.task.text}
         </span>
       </li>
     );
